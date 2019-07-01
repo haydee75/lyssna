@@ -15,7 +15,7 @@ class SelectCategories extends Component {
 
   fetchPodcasts() {
     axios
-      .get("http://localhost:3001/categories")
+      .get(process.env.REACT_APP_HOST_API + "/categories")
       .then(response => {
         this.setState({
           podcasts: response.data.genres

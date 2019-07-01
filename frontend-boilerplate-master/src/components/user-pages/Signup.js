@@ -26,7 +26,7 @@ class Signup extends Component {
 
     axios
       .post(
-        "http://localhost:3001/api/signup", // 1st and mandatory: which route I'm hitting in the backend
+        process.env.REACT_APP_HOST_API + "/api/signup", // 1st and mandatory: which route I'm hitting in the backend
         this.state, // 2nd and mandatory: what I'm sending (since it's POST route I have to send something)
         { withCredentials: true } // 3rd and optional: credentials:true in CORS
       )

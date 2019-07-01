@@ -25,7 +25,7 @@ class CardGenre extends Component {
 
   fetchPodcasts() {
     axios
-      .get(`http://localhost:3001/podcast/${this.state.genre}`)
+      .get(process.env.REACT_APP_HOST_API + `/podcast/${this.state.genre}`)
       .then(response => {
         this.setState({
           datas: response.data.podcasts
@@ -38,7 +38,7 @@ class CardGenre extends Component {
 
   searchEpisodes(e) {
     axios
-      .post("http://localhost:3001/podcastEpisodes", {
+      .post(process.env.REACT_APP_HOST_API + "/podcastEpisodes", {
         query: e
       })
       .then(response => {
@@ -59,7 +59,7 @@ class CardGenre extends Component {
 
   displayReviews = episode => {
     axios
-      .get("http://localhost:3001/reviews/" + episode, {
+      .get(process.env.REACT_APP_HOST_API + "/reviews/" + episode, {
         query: episode
       })
       .then(response => {
@@ -72,7 +72,7 @@ class CardGenre extends Component {
   addEpisodeToMyPlaylist = episode => {
     let data = { ...episode, user: this.state.user };
     axios
-      .post("http://localhost:3001/addEpisodeToMyPlaylist", data)
+      .post(process.env.REACT_APP_HOST_API + "/addEpisodeToMyPlaylist", data)
       .then(() => {
         this.setState({
           id: "",

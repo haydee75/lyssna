@@ -25,7 +25,7 @@ class Search extends Component {
   searchPodcast() {
     this.setState({ showDiv: !this.state.showDiv });
     axios
-      .post("http://localhost:3001/podcasts", {
+      .post(process.env.REACT_APP_HOST_API + "/podcasts", {
         query: this.state.search,
         page: this.state.page
       })
@@ -55,7 +55,7 @@ class Search extends Component {
 
   displayReviews = episode => {
     axios
-      .get("http://localhost:3001/reviews/" + episode, {
+      .get(process.env.REACT_APP_HOST_API + "/reviews/" + episode, {
         query: episode
       })
       .then(response => {
@@ -68,7 +68,7 @@ class Search extends Component {
   addEpisodeToMyPlaylist = episode => {
     let data = { ...episode, user: this.state.user };
     axios
-      .post("http://localhost:3001/addEpisodeToMyPlaylist", data)
+      .post(process.env.REACT_APP_HOST_API + "/addEpisodeToMyPlaylist", data)
       .then(() => {
         this.setState({
           id: "",

@@ -7,7 +7,7 @@ import CardTopic from "./CardTopic";
 class ListeEpisodesByTopic extends Component {
   searchRecommendations(recommendations) {
     axios
-      .post("http://localhost:3001/recommendations", {
+      .post(process.env.REACT_APP_HOST_API + "/recommendations", {
         query: recommendations
       })
       .then(response => {

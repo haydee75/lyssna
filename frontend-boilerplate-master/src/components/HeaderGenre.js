@@ -17,7 +17,7 @@ class HeaderGenre extends Component {
 
   fetchPodcasts() {
     axios
-      .get(`http://localhost:3001/podcast/${this.state.genre}`)
+      .get(process.env.REACT_APP_HOST_API + `/podcast/${this.state.genre}`)
       .then(response => {
         //console.log(response.data);
         this.setState({

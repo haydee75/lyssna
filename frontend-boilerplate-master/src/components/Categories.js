@@ -16,7 +16,7 @@ import Footer from "./Footer";
 class Categories extends Component {
   searchGenre(genre) {
     axios
-      .post("http://localhost:3001/bestPodcastsByGenre", {
+      .post(process.env.REACT_APP_HOST_API + "/bestPodcastsByGenre", {
         query: genre
       })
       .then(response => {
@@ -27,7 +27,7 @@ class Categories extends Component {
 
   searchTopic(topic) {
     axios
-      .post("http://localhost:3001/topic", {
+      .post(process.env.REACT_APP_HOST_API + "/topic", {
         query: topic
       })
       .then(response => {
@@ -38,7 +38,7 @@ class Categories extends Component {
 
   searchRecommendations(recommendations) {
     axios
-      .post("http://localhost:3001/recommendations", {
+      .post(process.env.REACT_APP_HOST_API + "/recommendations", {
         query: recommendations
       })
       .then(response => {

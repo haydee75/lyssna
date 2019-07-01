@@ -15,7 +15,7 @@ class Navbar extends Component {
     //console.log("user");
     // console.log(user);
     axios
-      .get("http://localhost:3001/playlist/" + user, {
+      .get(process.env.REACT_APP_HOST_API + "/playlist/" + user, {
         query: user
       })
       .then(response => {
@@ -27,7 +27,7 @@ class Navbar extends Component {
   };
 
   deleteEpisode = id => {
-    axios.post("http://localhost:3001/deleteEpisodeFromPlaylist/" + id, {
+    axios.post(process.env.REACT_APP_HOST_API + "/deleteEpisodeFromPlaylist/" + id, {
       query: id
     });
   };
@@ -40,7 +40,7 @@ class Navbar extends Component {
 
   logoutUser = () => {
     axios
-      .post("http://localhost:3001/api/logout", this.state, {
+      .post(process.env.REACT_APP_HOST_API + "/api/logout", this.state, {
         withCredentials: true
       })
       .then(() => {

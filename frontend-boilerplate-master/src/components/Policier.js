@@ -17,7 +17,7 @@ class Policier extends Component {
 
   fetchPodcasts() {
     axios
-      .get("http://localhost:3001/policier")
+      .get(process.env.REACT_APP_HOST_API + "/policier")
       .then(response => {
         // console.log(response);
         this.setState({

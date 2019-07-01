@@ -15,7 +15,7 @@ class LastReviews extends Component {
 
   fetchLastReviews() {
     axios
-      .get(`http://localhost:3001/lastReviews`)
+      .get(process.env.REACT_APP_HOST_API + `/lastReviews`)
       .then(response => {
         console.log(response.data);
         this.setState({
@@ -46,7 +46,7 @@ class LastReviews extends Component {
             <div className="team-inner text-center">
               <h6>{review.title}</h6>
               <hr />
-              <h5 className="team-title">{review.user.fullName}</h5>
+              {/* <h5 className="team-title">{review.user.fullName}</h5> */}
               <span>
                 {review.rating}&nbsp;
                 <i className="lni-heart-filled" />

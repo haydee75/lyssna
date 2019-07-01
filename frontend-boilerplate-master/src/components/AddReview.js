@@ -47,7 +47,7 @@ class AddReview extends Component {
     const image = this.state.image;
 
     axios
-      .post("http://localhost:3001/addReviews", {
+      .post(process.env.REACT_APP_HOST_API + "/addReviews", {
         id,
         user,
         rating,

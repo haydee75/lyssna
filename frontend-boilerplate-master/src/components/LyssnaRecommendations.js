@@ -18,7 +18,7 @@ class LyssnaRecommendations extends Component {
 
   fetchPlaylist() {
     axios
-      .get("http://localhost:3001/playlist/5d1601fa95c321040bbb1667")
+      .get(process.env.REACT_APP_HOST_API + "/playlist/5d1601fa95c321040bbb1667")
       .then(response => {
         this.setState({
           playlist: response.data

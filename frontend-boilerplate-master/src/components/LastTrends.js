@@ -16,7 +16,7 @@ class LastTrends extends Component {
 
   fetchPodcasts() {
     axios
-      .get("http://localhost:3001/lastTrends")
+      .get(process.env.REACT_APP_HOST_API + "/lastTrends")
       .then(response => {
         this.setState({
           podcasts: response.data.podcasts

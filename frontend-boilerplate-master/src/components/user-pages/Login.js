@@ -33,7 +33,7 @@ class Login extends Component {
 
     axios
       .post(
-        "http://localhost:3001/api/login",
+        process.env.REACT_APP_HOST_API + "/api/login",
         this.state,
         { withCredentials: true } // FORCE axios to send cookies across domains
       )
