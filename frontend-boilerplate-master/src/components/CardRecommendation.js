@@ -19,13 +19,29 @@ class CardRecommendation extends Component {
     };
   }
 
+  static getDerivedStateFromProps(nextProps, prevState) {
+    if (nextProps.currentUser !== prevState.currentUser) {
+      // return { currentUser: nextProps.currentUser };
+    } else return null;
+  }
+
+  componentDidUpdate(prevProps, prevState) {
+    if (prevProps.currentUser !== this.props.currentUser) {
+      //Perform some operation here
+      this.setState({ user: this.props.currentUser });
+    }
+  }
+
   componentDidMount() {
     this.fetchEpisodes();
   }
 
   fetchEpisodes() {
     axios
-      .get(process.env.REACT_APP_HOST_API + `/recommendations/${this.state.recommendations}`)
+      .get(
+        process.env.REACT_APP_HOST_API +
+          `/recommendations/${this.state.recommendations}`
+      )
       .then(response => {
         this.setState({
           episodes: response.data.recommendations
@@ -128,12 +144,14 @@ class CardRecommendation extends Component {
                               </a>
                               <i className="lni-google lni-reco cursorPointer" />
                             </div>
-                            <button
-                              className="cursorPointer reco"
-                              onClick={() => this.addEpisodeToMyPlaylist(e)}
-                            >
-                              Ajouter à ma playlist
-                            </button>
+                            {this.state.user && (
+                              <button
+                                className="cursorPointer reco"
+                                onClick={() => this.addEpisodeToMyPlaylist(e)}
+                              >
+                                Ajouter à ma playlist
+                              </button>
+                            )}
                             &nbsp;
                             <button
                               className="cursorPointer reco"
@@ -177,15 +195,16 @@ class CardRecommendation extends Component {
                                 {listeReviews}
                                 <hr />
                                 <br />
-                                <button
-                                  type="button"
-                                  className="btn-common-small"
-                                  data-toggle="modal"
-                                  data-target={`#myModal` + e.id}
-                                >
-                                  Laissez un avis
-                                </button>
-
+                                {this.state.user && (
+                                  <button
+                                    type="button"
+                                    className="btn-common-small"
+                                    data-toggle="modal"
+                                    data-target={`#myModal` + e.id}
+                                  >
+                                    Laissez un avis
+                                  </button>
+                                )}
                                 <div
                                   className="modal fade"
                                   id={`myModal` + e.id}

@@ -537,3 +537,20 @@ big {
 .modal-title-small {
   font-size: 20px;
 }
+
+.mode-emploi {
+  padding: 1em;
+  border-radius: 4px;
+  background: no-repeat url("./img/cherry/cherry-come-back-later.png");
+  background-color: white !important;
+  background-position: right top;
+  opacity: 0.75;
+}
+
+.mode-emploi li {
+  color: #151948 !important;
+}
+
+.mode-emploi ol {
+  width: 65%;
+}

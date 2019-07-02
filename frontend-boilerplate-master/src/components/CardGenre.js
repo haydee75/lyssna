@@ -19,6 +19,19 @@ class CardGenre extends Component {
     };
   }
 
+  static getDerivedStateFromProps(nextProps, prevState) {
+    if (nextProps.currentUser !== prevState.currentUser) {
+      // return { currentUser: nextProps.currentUser };
+    } else return null;
+  }
+
+  componentDidUpdate(prevProps, prevState) {
+    if (prevProps.currentUser !== this.props.currentUser) {
+      //Perform some operation here
+      this.setState({ user: this.props.currentUser });
+    }
+  }
+
   componentDidMount() {
     this.fetchPodcasts();
   }
@@ -152,12 +165,16 @@ class CardGenre extends Component {
                                   <i className="lni-twitter lni-reco cursorPointer" />
                                   <i className="lni-google lni-reco cursorPointer" />
                                 </div>
-                                <button
-                                  className="cursorPointer reco"
-                                  onClick={() => this.addEpisodeToMyPlaylist(e)}
-                                >
-                                  Ajouter à ma playlist
-                                </button>
+                                {this.state.user && (
+                                  <button
+                                    className="cursorPointer reco"
+                                    onClick={() =>
+                                      this.addEpisodeToMyPlaylist(e)
+                                    }
+                                  >
+                                    Ajouter à ma playlist
+                                  </button>
+                                )}
                                 &nbsp;
                                 <button
                                   className="cursorPointer reco"
@@ -198,15 +215,16 @@ class CardGenre extends Component {
                                     {listeReviews}
                                     <hr />
                                     <br />
-                                    <button
-                                      type="button"
-                                      className="btn-common-small"
-                                      data-toggle="modal"
-                                      data-target={`#` + i + "-" + j}
-                                    >
-                                      Laissez un avis
-                                    </button>
-
+                                    {this.state.user && (
+                                      <button
+                                        type="button"
+                                        className="btn-common-small"
+                                        data-toggle="modal"
+                                        data-target={`#` + i + "-" + j}
+                                      >
+                                        Laissez un avis
+                                      </button>
+                                    )}
                                     <div
                                       className="modal fade"
                                       id={i + "-" + j}

@@ -13,9 +13,11 @@ class CategoriesPreview extends Component {
                   <h2 className="section-title">Parcourez les catégories</h2>
                   <div className="desc-text">
                     <p>
-                      Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-                      sed do <br /> eiusmod tempor incididunt ut labore et
-                      dolore &nbsp;
+                      Rendez vous dans la section catégories et parcourez les
+                      différentes collections de podcasts.
+                      <br />
+                      Découvrez les playlists que nous avons sélectionner
+                      spécialement pour vous
                       <span>
                         <Link to="/Categories" className="nav-link page-scroll">
                           <i className="lni-chevron-right-circle" />
@@ -40,9 +42,9 @@ class CategoriesPreview extends Component {
                   <div className="feature-info float-left">
                     <h4>Voyages</h4>
                     <p>
-                      Producing long lasting organic SEO results for <br />{" "}
-                      brand of different kinds for more than a decade,
-                      <br /> we understand that’s your.
+                      Même le plus long des voyages
+                      <br />
+                      commence par un premier pas - <i>Lao Tseu</i>
                     </p>
                   </div>
                 </div>
@@ -61,9 +63,9 @@ class CategoriesPreview extends Component {
                   <div className="feature-info float-left">
                     <h4>Sport</h4>
                     <p>
-                      Producing long lasting organic SEO results for <br />{" "}
-                      brand of different kinds for more than a decade,
-                      <br /> we understand that’s your.
+                      Qui n’a pas d’imagination
+                      <br />
+                      n’a pas d’ailes - <i>Mohammed Ali</i>
                     </p>
                   </div>
                 </div>
@@ -82,9 +84,8 @@ class CategoriesPreview extends Component {
                   <div className="feature-info float-left">
                     <h4>Design</h4>
                     <p>
-                      Producing long lasting organic SEO results for <br />{" "}
-                      brand of different kinds for more than a decade,
-                      <br /> we understand that’s your.
+                      Le design c'est la créativité <br />
+                      associé à la stratégie - <i>Rob Curedale</i>
                     </p>
                   </div>
                 </div>
@@ -103,9 +104,8 @@ class CategoriesPreview extends Component {
                   <div className="feature-info float-left">
                     <h4>Sciences</h4>
                     <p>
-                      Producing long lasting organic SEO results for <br />{" "}
-                      brand of different kinds for more than a decade,
-                      <br /> we understand that’s your.
+                      La science consiste à passer <br /> d'un étonnement à un
+                      autre - <i>Aristote</i>
                     </p>
                   </div>
                 </div>
@@ -124,9 +124,8 @@ class CategoriesPreview extends Component {
                   <div className="feature-info float-left">
                     <h4>Cinéma et séries</h4>
                     <p>
-                      Producing long lasting organic SEO results for <br />{" "}
-                      brand of different kinds for more than a decade,
-                      <br /> we understand that’s your.
+                      Le cinéma, c’est l’écriture moderne <br />
+                      dont l’encre est la lumière - <i>Jean Cocteau</i>
                     </p>
                   </div>
                 </div>
@@ -145,9 +144,8 @@ class CategoriesPreview extends Component {
                   <div className="feature-info float-left">
                     <h4>Geek</h4>
                     <p>
-                      Producing long lasting organic SEO results for <br />{" "}
-                      brand of different kinds for more than a decade,
-                      <br /> we understand that’s your.
+                      A quoi sert Internet Explorer ?<br />A télécharger Google
+                      Chrome !
                     </p>
                   </div>
                 </div>

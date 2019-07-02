@@ -1,4 +1,5 @@
 import React, { Component, Fragment } from "react";
+import ModeEmploi from "./ModeEmploi";
 import illu from "../img/cherry-coming-soon.png";
 
 class Header extends Component {
@@ -16,14 +17,14 @@ class Header extends Component {
                   millions de podcasts...
                 </p>
                 <div className="header-button">
-                  <a
-                    href="https://rebrand.ly/slick-ud"
-                    target="_blank"
-                    rel="noopener noreferrer"
+                  <button
+                    type="button"
                     className="btn btn-border page-scroll"
+                    data-toggle="modal"
+                    data-target=".bd-example-modal-lg"
                   >
                     En savoir plus
-                  </a>
+                  </button>
                 </div>
               </div>
             </div>
@@ -33,6 +34,16 @@ class Header extends Component {
               </div>
             </div>
           </div>
+        </div>
+
+        <div
+          className="modal fade bd-example-modal-lg"
+          tabindex="-1"
+          role="dialog"
+          aria-labelledby="myLargeModalLabel"
+          aria-hidden="true"
+        >
+          <ModeEmploi />
         </div>
       </Fragment>
     );

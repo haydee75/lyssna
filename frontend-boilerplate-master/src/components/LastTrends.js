@@ -74,7 +74,7 @@ class LastTrends extends Component {
                               <div className="fancy-table">
                                 <div className="table-cell">
                                   <div className="single-text">
-                                    <p>{p.publisher}</p>
+                                    <p>from {p.publisher}</p>
                                     <h5>{p.title}</h5>
                                   </div>
                                 </div>

@@ -12,11 +12,8 @@ class HeaderCategorie extends Component {
               <p>
                 Une idée en tête ?<br />
                 Saisissez un mot clef dans la barre de recherche ou choisissez
-                une thématique parmis les nombreux genres disponibles
-                <br />
-                <br />
-                Pas d'idée précise ?<br /> Laissez vous surprendre et parcourez
-                ce que nous avons selectionné spécialement pour vous...
+                une thématique parmis les nombreux genres et playlists
+                proposés...
               </p>
             </div>
           </div>

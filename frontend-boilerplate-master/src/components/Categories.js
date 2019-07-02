@@ -3,7 +3,7 @@ import axios from "axios";
 //import Navbar from "./Navbar";
 import Search from "./Search";
 import HeaderCategorie from "./HeaderCategorie";
-import SelectCategories from "./SelectCategories";
+// import SelectCategories from "./SelectCategories";
 import LyssnaRecommendations from "./LyssnaRecommendations";
 import SectionDivertissement from "./SectionDivertissement";
 import Identites from "./Identites";
@@ -14,6 +14,10 @@ import Policier from "./Policier";
 import Footer from "./Footer";
 
 class Categories extends Component {
+  componentDidMount() {
+    window.scrollTo(0, 0);
+  }
+
   searchGenre(genre) {
     axios
       .post(process.env.REACT_APP_HOST_API + "/bestPodcastsByGenre", {
@@ -55,13 +59,12 @@ class Categories extends Component {
             <span />
             <span />
           </div>
-          {/* <Navbar /> */}
           <HeaderCategorie />
           <br />
           <div className="categorie-search">
-            <div>
+            {/* <div>
               <SelectCategories />
-            </div>
+            </div> */}
             <div>
               <Search
                 searchRecommendations={this.searchRecommendations.bind(this)}

@@ -5,18 +5,35 @@ import AddReview from "./AddReview";
 class CardTopic extends Component {
   constructor(props) {
     super(props);
+    console.log("là", props);
     this.state = {
       episodes: [],
       listeReviews: [],
       topic: this.props.topic,
 
-      user: this.props.currentUser,
+      user: props.currentUser,
       episodId: "",
       episodImage: "",
       episodTitle_original: "",
       episodPublisher_original: "",
       episodAudio: ""
     };
+
+    console.log("là", this.state);
+  }
+
+  static getDerivedStateFromProps(nextProps, prevState) {
+    if (nextProps.currentUser !== prevState.currentUser) {
+      // return { currentUser: nextProps.currentUser };
+    } else return null;
+  }
+
+  componentDidUpdate(prevProps, prevState) {
+    if (prevProps.currentUser !== this.props.currentUser) {
+      //Perform some operation here
+      console.log("ici");
+      this.setState({ user: this.props.currentUser });
+    }
   }
 
   componentDidMount() {
@@ -127,12 +144,14 @@ class CardTopic extends Component {
                               </a>
                               <i className="lni-google lni-reco cursorPointer" />
                             </div>
-                            <button
-                              className="cursorPointer reco"
-                              onClick={() => this.addEpisodeToMyPlaylist(e)}
-                            >
-                              Ajouter à ma playlist
-                            </button>
+                            {this.state.user && (
+                              <button
+                                className="cursorPointer reco"
+                                onClick={() => this.addEpisodeToMyPlaylist(e)}
+                              >
+                                Ajouter à ma playlist
+                              </button>
+                            )}
                             &nbsp;
                             <button
                               className="cursorPointer reco"
@@ -176,15 +195,16 @@ class CardTopic extends Component {
                                 {listeReviews}
                                 <hr />
                                 <br />
-                                <button
-                                  type="button"
-                                  className="btn-common-small"
-                                  data-toggle="modal"
-                                  data-target={`#myModal` + e.id}
-                                >
-                                  Laissez un avis
-                                </button>
-
+                                {this.state.user && (
+                                  <button
+                                    type="button"
+                                    className="btn-common-small"
+                                    data-toggle="modal"
+                                    data-target={`#myModal` + e.id}
+                                  >
+                                    Laissez un avis
+                                  </button>
+                                )}
                                 <div
                                   className="modal fade"
                                   id={`myModal` + e.id}

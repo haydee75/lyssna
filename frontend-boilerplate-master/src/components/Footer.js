@@ -18,14 +18,14 @@ class Footer extends Component {
                   <h3 className="block-title">Suivez nous</h3>
                   <ul className="menu">
                     <li>
-                      <Link to="www.google.com">
+                      <p>
                         <i className="lni-facebook-filled" />
-                      </Link>
+                      </p>
                     </li>
                     <li>
-                      <Link to="www.google.com">
+                      <p>
                         <i className="lni-twitter-filled" />
-                      </Link>
+                      </p>
                     </li>
                   </ul>
                 </div>
@@ -35,30 +35,17 @@ class Footer extends Component {
                   <h3 className="block-title">Produit</h3>
                   <ul className="menu">
                     <li>
-                      <Link to="www.google.com">Service Client</Link>
+                      <p>Service Client</p>
                     </li>
                     <li>
-                      <Link to="www.google.com">FAQ</Link>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-              <div className="col-lg-2 col-md-6 col-sm-6 col-xs-6 col-mb-12">
-                <div className="widget">
-                  <h3 className="block-title">Application</h3>
-                  <ul className="menu">
-                    <li>
-                      <Link to="www.google.com">Android</Link>
-                    </li>
-                    <li>
-                      <Link to="www.google.com">IOS</Link>
+                      <p>FAQ</p>
                     </li>
                   </ul>
                 </div>
               </div>
               <div className="col-lg-3 col-md-6 col-sm-6 col-xs-6 col-mb-12">
                 <div className="widget">
-                  <h3 className="block-title">Souscrire</h3>
+                  <h3 className="block-title">Newsletter</h3>
                   <div className="subscribe-area">
                     <input
                       type="email"
