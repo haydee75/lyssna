@@ -5,6 +5,10 @@ import HeaderEpisodes from "./HeaderEpisodes";
 import CardTopic from "./CardTopic";
 
 class ListeEpisodesByTopic extends Component {
+  componentDidMount() {
+    window.scrollTo(0, 0);
+  }
+
   searchRecommendations(recommendations) {
     axios
       .post(process.env.REACT_APP_HOST_API + "/recommendations", {
@@ -12,7 +16,7 @@ class ListeEpisodesByTopic extends Component {
       })
       .then(response => {
         this.props.history.push("/ListeRecommendationsByID/" + recommendations);
-        console.log(response);
+        //console.log(response);
       });
   }
 
@@ -28,6 +32,7 @@ class ListeEpisodesByTopic extends Component {
           {/* <Navbar /> */}
           <HeaderEpisodes topic={topicName} />
         </div>
+
         <CardTopic
           topic={topicName}
           searchRecommendations={this.searchRecommendations.bind(this)}

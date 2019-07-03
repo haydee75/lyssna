@@ -420,6 +420,17 @@ big {
   color: indianred !important;
 }
 
+.reco:hover {
+  background: indianred;
+  color: white !important;
+}
+
+.reco:active {
+  background: white;
+  border: none;
+  color: indianred !important;
+}
+
 .lni-reco {
   color: indianred;
   background: white;
@@ -554,3 +565,14 @@ big {
 .mode-emploi ol {
   width: 65%;
 }
+
+.margin-bottom {
+  margin-bottom: 1em;
+}
+
+/* .newClass {
+  padding: 5px !important;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 5px;
+  background: rgba(255, 255, 255, 0.1);
+} */

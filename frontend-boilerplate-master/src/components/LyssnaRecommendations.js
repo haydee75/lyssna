@@ -19,7 +19,7 @@ class LyssnaRecommendations extends Component {
   fetchPlaylist() {
     axios
       .get(
-        process.env.REACT_APP_HOST_API + "/playlist/5d1b1bb7ce06170017114705"
+        process.env.REACT_APP_HOST_API + "/playlist/5d1601fa95c321040bbb1667"
       )
       .then(response => {
         this.setState({
@@ -45,7 +45,8 @@ class LyssnaRecommendations extends Component {
                     className="carousel slide"
                     data-ride="carousel"
                   >
-                    <div className="carousel-inner carousel-lyssnareco">
+                    {/* <div className="carousel-inner carousel-lyssnareco"> */}
+                    <div className="carousel-inner">
                       <div className="carousel-item active">
                         <img className="img-car" src={test} alt="First slide" />
                         <br />

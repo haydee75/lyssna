@@ -1,7 +1,6 @@
 import React, { Component, Fragment } from "react";
 import axios from "axios";
 import Search from "./Search";
-// import Navbar from "./Navbar";
 import Header from "./Header";
 import Details from "./Details";
 import AccountBanner from "./AccountBanner";
@@ -9,7 +8,6 @@ import LastTrends from "./LastTrends";
 import CategoriesPreview from "./CategoriesPreview";
 import LastReviews from "./LastReviews";
 import GetInTouch from "./GetInTouch";
-import Footer from "./Footer";
 import Sondage from "./Sondage";
 
 class Home extends Component {
@@ -58,7 +56,6 @@ class Home extends Component {
         <LastReviews />
         <Sondage />
         <GetInTouch />
-        <Footer />
         <a href="#home" className="back-to-top">
           <i className="lni-chevron-up" />
         </a>

@@ -11,7 +11,6 @@ import Decouverte from "./Decouverte";
 import Sciences from "./Sciences";
 import Lyfestyle from "./Lyfestyle";
 import Policier from "./Policier";
-import Footer from "./Footer";
 
 class Categories extends Component {
   componentDidMount() {
@@ -25,7 +24,7 @@ class Categories extends Component {
       })
       .then(response => {
         this.props.history.push("/ListePodcastsByCategorie/" + genre);
-        console.log(response);
+        // console.log(response);
       });
   }
 
@@ -36,7 +35,7 @@ class Categories extends Component {
       })
       .then(response => {
         this.props.history.push("/ListeEpisodesByTopic/" + topic);
-        console.log(response);
+        //console.log(response);
       });
   }
 
@@ -47,7 +46,7 @@ class Categories extends Component {
       })
       .then(response => {
         this.props.history.push("/ListeRecommendationsByID/" + recommendations);
-        console.log(response);
+        //console.log(response);
       });
   }
 
@@ -86,7 +85,7 @@ class Categories extends Component {
         <br />
         <br />
         <Policier />
-        <Footer />
+
         <a href="#home" className="back-to-top">
           <i className="lni-chevron-up" />
         </a>

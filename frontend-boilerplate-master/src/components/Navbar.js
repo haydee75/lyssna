@@ -27,9 +27,12 @@ class Navbar extends Component {
   };
 
   deleteEpisode = id => {
-    axios.post(process.env.REACT_APP_HOST_API + "/deleteEpisodeFromPlaylist/" + id, {
-      query: id
-    });
+    axios.post(
+      process.env.REACT_APP_HOST_API + "/deleteEpisodeFromPlaylist/" + id,
+      {
+        query: id
+      }
+    );
   };
 
   // componentWillReceiveProps(nextProps) {
@@ -96,6 +99,7 @@ class Navbar extends Component {
                     </li>
                     <li className="nav-item">
                       <button
+                        id="effect"
                         type="button"
                         className="btn-playlist nav-link page-scroll"
                         data-toggle="modal"

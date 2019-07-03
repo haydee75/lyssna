@@ -40,7 +40,7 @@ class Policier extends Component {
                   <h2 className="section-title title-black">Gangsters</h2>
 
                   <div
-                    id="carouselExampleControls"
+                    id="carouselExampleControls2"
                     className="carousel slide"
                     data-ride="carousel"
                   >
@@ -75,7 +75,7 @@ class Policier extends Component {
                     </div>
                     <a
                       className="carousel-control-prev"
-                      href="#carouselExampleControls"
+                      href="#carouselExampleControls2"
                       role="button"
                       data-slide="prev"
                     >
@@ -87,7 +87,7 @@ class Policier extends Component {
                     </a>
                     <a
                       className="carousel-control-next"
-                      href="#carouselExampleControls"
+                      href="#carouselExampleControls2"
                       role="button"
                       data-slide="next"
                     >

@@ -1,6 +1,5 @@
 import React, { Component, Fragment } from "react";
 //import Navbar from "../Navbar";
-import Footer from "../Footer";
 import axios from "axios";
 import illu from "../../img/cherry/sign-in-2.png";
 import { Redirect } from "react-router-dom";
@@ -111,7 +110,6 @@ class Login extends Component {
           </div>
         </div>
         {this.state.message && <div> {this.state.message} </div>}
-        <Footer />
       </Fragment>
     );
   }

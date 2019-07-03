@@ -3,7 +3,6 @@ import axios from "axios";
 //import Navbar from "./Navbar";
 import HeaderGenre from "./HeaderGenre";
 import CardGenre from "./CardGenre";
-import Footer from "./Footer";
 
 class ListePodcastsByCategorie extends Component {
   searchRecommendations(recommendations) {
@@ -35,7 +34,6 @@ class ListePodcastsByCategorie extends Component {
           currentUser={this.props.currentUser}
         />
         <br />
-        <Footer />
       </Fragment>
     );
   }

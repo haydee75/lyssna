@@ -9,6 +9,7 @@ import ListePodcastsByCategorie from "./components/ListePodcastsByCategorie";
 import ListeEpisodesByTopic from "./components/ListeEpisodesByTopic";
 import ListeRecommendationsByID from "./components/ListeRecommendationsByID";
 import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
 import axios from "axios";
 
 class App extends Component {
@@ -111,6 +112,7 @@ class App extends Component {
           )}
         />
         <Route path="/Logout" />
+        <Footer />
       </Fragment>
     );
   }

@@ -5,7 +5,7 @@ import AddReview from "./AddReview";
 class CardTopic extends Component {
   constructor(props) {
     super(props);
-    console.log("là", props);
+    //console.log("là", props);
     this.state = {
       episodes: [],
       listeReviews: [],
@@ -19,7 +19,7 @@ class CardTopic extends Component {
       episodAudio: ""
     };
 
-    console.log("là", this.state);
+    //console.log("là", this.state);
   }
 
   static getDerivedStateFromProps(nextProps, prevState) {
@@ -31,7 +31,7 @@ class CardTopic extends Component {
   componentDidUpdate(prevProps, prevState) {
     if (prevProps.currentUser !== this.props.currentUser) {
       //Perform some operation here
-      console.log("ici");
+      //console.log("ici");
       this.setState({ user: this.props.currentUser });
     }
   }
@@ -114,7 +114,7 @@ class CardTopic extends Component {
 
     return (
       <Fragment>
-        <div className="container-fluid">
+        <div className="container-fluid margin-bottom">
           <div>
             <div className="card card-body cardGenre">
               <div className="album py-5 bg-light">
@@ -146,6 +146,7 @@ class CardTopic extends Component {
                             </div>
                             {this.state.user && (
                               <button
+                                id="button"
                                 className="cursorPointer reco"
                                 onClick={() => this.addEpisodeToMyPlaylist(e)}
                               >
