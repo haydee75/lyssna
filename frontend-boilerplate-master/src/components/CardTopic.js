@@ -179,7 +179,7 @@ class CardTopic extends Component {
                               </figure>
                             </div>
                             <a
-                              className="btn btn-border page-scroll"
+                              className="btn btn-border page-scroll btn-width-100"
                               data-toggle="collapse"
                               href={`#` + e.id}
                               role="button"
@@ -187,7 +187,7 @@ class CardTopic extends Component {
                               aria-controls="collapseExample"
                               onClick={() => this.displayReviews(`${e.id}`)}
                             >
-                              voir les avis
+                              avis
                             </a>
                             <br />
                             <br />
@@ -199,11 +199,11 @@ class CardTopic extends Component {
                                 {this.state.user && (
                                   <button
                                     type="button"
-                                    className="btn-common-small"
+                                    className="btn-common-small btn-width-100"
                                     data-toggle="modal"
                                     data-target={`#myModal` + e.id}
                                   >
-                                    Laissez un avis
+                                    Interagir
                                   </button>
                                 )}
                                 <div
@@ -233,16 +233,6 @@ class CardTopic extends Component {
                                           imageEpisode={e.image}
                                           user={this.state.user}
                                         />
-                                      </div>
-
-                                      <div className="modal-footer">
-                                        <button
-                                          type="button"
-                                          className="btn btn-secondary"
-                                          data-dismiss="modal"
-                                        >
-                                          Close
-                                        </button>
                                       </div>
                                     </div>
                                   </div>

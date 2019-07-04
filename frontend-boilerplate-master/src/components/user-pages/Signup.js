@@ -2,6 +2,7 @@ import React, { Component, Fragment } from "react";
 //import Navbar from "../Navbar";
 import axios from "axios";
 import illu from "../../img/cherry/sign-up-3.png";
+import { Redirect } from "react-router-dom";
 
 class Signup extends Component {
   constructor(props) {
@@ -11,9 +12,17 @@ class Signup extends Component {
       fullName: "",
       email: "",
       originalPassword: "",
-      message: null
+      message: null,
+      redirect: false
     };
   }
+
+  renderRedirect = () => {
+    if (this.state.redirect) {
+      return <Redirect to="/" />;
+    }
+  };
+
   // 🎯 you can reuse this for every React form
   genericSync(event) {
     const { name, value } = event.target;
@@ -33,6 +42,10 @@ class Signup extends Component {
         // console.log("response is: ", responseFromServer);
         const { userDoc } = responseFromServer.data;
         this.props.onUserChange(userDoc);
+        alert("Inscription réussie ! Vous êtes connecté(e)");
+        this.setState({
+          redirect: true
+        });
       })
       .catch(err => {
         // console.log("error while signup: ", err);
@@ -58,6 +71,7 @@ class Signup extends Component {
 
     return (
       <Fragment>
+        {this.renderRedirect()}
         <div id="home" className="hero-area">
           <div className="overlay">
             <span />

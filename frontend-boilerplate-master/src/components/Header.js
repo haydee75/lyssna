@@ -13,8 +13,8 @@ class Header extends Component {
                 <h2 className="head-title">Vous aimez les podcasts ?</h2>
                 <p>
                   <span className="logo">Lyssna</span> est un service gratuit
-                  qui vous permet de découvrir, écouter, noter et classer des
-                  millions de podcasts...
+                  qui vous permet de découvrir, écouter, télécharger, noter et
+                  classer des millions de podcasts...
                 </p>
                 <div className="header-button">
                   <button

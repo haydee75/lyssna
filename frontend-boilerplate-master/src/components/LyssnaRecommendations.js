@@ -19,7 +19,7 @@ class LyssnaRecommendations extends Component {
   fetchPlaylist() {
     axios
       .get(
-        process.env.REACT_APP_HOST_API + "/playlist/5d1601fa95c321040bbb1667"
+        process.env.REACT_APP_HOST_API + "/playlist/5d1b1bb7ce06170017114705"
       )
       .then(response => {
         this.setState({

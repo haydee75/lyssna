@@ -198,7 +198,7 @@ class CardGenre extends Component {
                                   </figure>
                                 </div>
                                 <a
-                                  className="btn btn-border page-scroll"
+                                  className="btn btn-border page-scroll btn-width-100 "
                                   data-toggle="collapse"
                                   href={`#` + i + "_" + j}
                                   role="button"
@@ -206,7 +206,7 @@ class CardGenre extends Component {
                                   aria-controls={"collapseExample" + e.id}
                                   onClick={() => this.displayReviews(`${e.id}`)}
                                 >
-                                  voir les avis
+                                  avis
                                 </a>
                                 <br />
                                 <br />
@@ -218,11 +218,11 @@ class CardGenre extends Component {
                                     {this.state.user && (
                                       <button
                                         type="button"
-                                        className="btn-common-small"
+                                        className="btn-common-small btn-width-100"
                                         data-toggle="modal"
                                         data-target={`#` + i + "-" + j}
                                       >
-                                        Laissez un avis
+                                        Interagir
                                       </button>
                                     )}
                                     <div

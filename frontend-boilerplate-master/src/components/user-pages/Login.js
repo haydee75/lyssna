@@ -41,7 +41,7 @@ class Login extends Component {
         const { userDoc } = response.data;
         // send "userDoc" to the App.js function that changes "currentUser"
         this.props.onUserChange(userDoc);
-        alert("Logged in successfully!");
+        alert("Vous êtes connecté(e)");
         this.setState({
           redirect: true
         });

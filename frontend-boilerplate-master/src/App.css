@@ -553,16 +553,35 @@ big {
   padding: 1em;
   border-radius: 4px;
   background: no-repeat url("./img/cherry/cherry-come-back-later.png");
-  background-color: white !important;
+  background-color: white;
   background-position: right top;
-  opacity: 0.75;
+  /* opacity: 0.8; */
+}
+
+@media screen and (max-width: 1000px) {
+  .mode-emploi {
+    background: white;
+  }
+  .mode-emploi ul {
+    width: 100% !important;
+  }
+  .mode-emploi li {
+    border-radius: 4px;
+    border: 1px solid pink;
+    padding: 10px;
+  }
 }
 
 .mode-emploi li {
   color: #151948 !important;
+  font-weight: bold;
 }
 
-.mode-emploi ol {
+.mode-emploi i {
+  color: indianred;
+}
+
+.mode-emploi ul {
   width: 65%;
 }
 
@@ -576,3 +595,7 @@ big {
   border-radius: 5px;
   background: rgba(255, 255, 255, 0.1);
 } */
+
+.btn-width-100 {
+  width: 100%;
+}
