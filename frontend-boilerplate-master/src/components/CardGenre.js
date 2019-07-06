@@ -113,7 +113,7 @@ class CardGenre extends Component {
           <b>{review.user.fullName}</b>
           <span>
             {review.rating}&nbsp;
-            <i className="lni-heart-filled" />
+            <i className="lni-star-filled" />
           </span>
         </p>
         <p>{review.comments}</p>
@@ -149,8 +149,8 @@ class CardGenre extends Component {
                   <div className="container">
                     <div className="row">
                       {this.state.episodes.map((e, j) => (
-                        <Fragment>
-                          <div key={e.id} className="col-md-4">
+                        <Fragment key={e.id}>
+                          <div className="col-md-4">
                             <div className="card mb-4 box-shadow">
                               <img
                                 className="card-img-top"
@@ -222,7 +222,7 @@ class CardGenre extends Component {
                                         data-toggle="modal"
                                         data-target={`#` + i + "-" + j}
                                       >
-                                        Interagir
+                                        Commenter
                                       </button>
                                     )}
                                     <div

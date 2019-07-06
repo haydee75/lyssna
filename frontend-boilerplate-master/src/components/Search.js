@@ -109,7 +109,7 @@ class Search extends Component {
           <b>{review.user.fullName}</b>
           <span>
             {review.rating}&nbsp;
-            <i className="lni-heart-filled" />
+            <i className="lni-star-filled" />
           </span>
         </p>
         <p>{review.comments}</p>
@@ -154,6 +154,9 @@ class Search extends Component {
                               src={e.image}
                               data-holder-rendered="true"
                             />
+                            <h3 className="title-episode">
+                              {e.title_original}
+                            </h3>
                             <div className="flex-space-between">
                               <div>
                                 <i className="lni-facebook lni-reco cursorPointer" />
@@ -214,7 +217,7 @@ class Search extends Component {
                                       data-toggle="modal"
                                       data-target={`#myModal` + e.id}
                                     >
-                                      Interagir
+                                      Commenter
                                     </button>
                                   )}
                                   <div

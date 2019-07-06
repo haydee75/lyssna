@@ -9,7 +9,9 @@ class Sciences extends Component {
             <div className="col-lg-12">
               <div className="features-text section-header text-center">
                 <div>
-                  <h2 className="section-title">Sciences et techniques</h2>
+                  <h2 className="section-title">
+                    Podcasts Sciences et techniques
+                  </h2>
                 </div>
               </div>
             </div>
@@ -21,10 +23,14 @@ class Sciences extends Component {
                 onClick={() => this.props.searchGenre("107")}
               >
                 <div className="feature-item featured-border1">
-                  <h4>
-                    <i className="lni-stethoscope">&nbsp;</i>
-                    Médecine
-                  </h4>
+                  <div className="lniBWhite feature-icon float-left">
+                    <i className="lni-stethoscope" />
+                  </div>
+                  <div className="feature-info">
+                    <br />
+                    <br />
+                    <h4>Médecine</h4>
+                  </div>
                 </div>
               </button>
             </div>
@@ -34,25 +40,33 @@ class Sciences extends Component {
                 className="cursorPointer linkstyle"
                 onClick={() => this.props.searchGenre("110")}
               >
-                <div className="feature-item featured-border2">
-                  <h4>
-                    <i className="lni-bug">&nbsp;</i>
-                    Sciences naturelles
-                  </h4>
+                <div className="feature-item featured-border1">
+                  <div className="lniBWhite feature-icon float-left">
+                    <i className="lni-bug" />
+                  </div>
+                  <div className="feature-info">
+                    <br />
+                    <br />
+                    <h4>Sciences naturelles</h4>
+                  </div>
                 </div>
               </button>
             </div>
 
-            <div className="col-lg-6 col-md-6 col-xs-12 p-0 medcine-Box">
+            <div className="col-lg-6 col-md-6 col-xs-12 p-0 medecine-Box">
               <button
                 className="cursorPointer linkstyle"
                 onClick={() => this.props.searchGenre("108")}
               >
                 <div className="feature-item featured-border1">
-                  <h4>
-                    <i className="lni-users">&nbsp;</i>
-                    Sciences sociales
-                  </h4>
+                  <div className="lniBWhite feature-icon float-left">
+                    <i className="lni-users" />
+                  </div>
+                  <div className="feature-info">
+                    <br />
+                    <br />
+                    <h4>Sciences sociales</h4>
+                  </div>
                 </div>
               </button>
             </div>
@@ -62,11 +76,15 @@ class Sciences extends Component {
                 className="cursorPointer linkstyle"
                 onClick={() => this.props.searchGenre("131")}
               >
-                <div className="feature-item featured-border2">
-                  <h4>
-                    <i className="lni-laptop-phone">&nbsp;</i>
-                    Technologie
-                  </h4>
+                <div className="feature-item featured-border1">
+                  <div className="lniBWhite feature-icon float-left">
+                    <i className="lni-laptop-phone" />
+                  </div>
+                  <div className="feature-info">
+                    <br />
+                    <br />
+                    <h4>Technologie</h4>
+                  </div>
                 </div>
               </button>
             </div>
@@ -76,11 +94,15 @@ class Sciences extends Component {
                 className="cursorPointer linkstyle"
                 onClick={() => this.props.searchGenre("140")}
               >
-                <div className="feature-item featured-border3">
-                  <h4>
-                    <i className="lni-code">&nbsp;</i>
-                    Tendances Web
-                  </h4>
+                <div className="feature-item featured-border1">
+                  <div className="lniBWhite feature-icon float-left">
+                    <i className="lni-code" />
+                  </div>
+                  <div className="feature-info">
+                    <br />
+                    <br />
+                    <h4>Tendances Web</h4>
+                  </div>
                 </div>
               </button>
             </div>
@@ -90,11 +112,15 @@ class Sciences extends Component {
                 className="cursorPointer linkstyle"
                 onClick={() => this.props.searchGenre("116")}
               >
-                <div className="feature-item">
-                  <h4>
-                    <i className="lni-comment-alt">&nbsp;</i>
-                    Langues
-                  </h4>
+                <div className="feature-item featured-border1">
+                  <div className="lniBWhite feature-icon float-left">
+                    <i className="lni-comment-alt" />
+                  </div>
+                  <div className="feature-info">
+                    <br />
+                    <br />
+                    <h4>Langues</h4>
+                  </div>
                 </div>
               </button>
             </div>

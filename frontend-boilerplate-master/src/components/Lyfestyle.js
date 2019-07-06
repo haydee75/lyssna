@@ -13,7 +13,7 @@ class Lyfestyle extends Component {
             <div className="col-lg-12">
               <div className="showcase-text section-header text-center">
                 <div>
-                  <h2 className="section-title">Playlists Lyfestyle</h2>
+                  <h2 className="section-title">Playlists Lifestyle</h2>
                   <br /> <br />
                   <div className="desc-text">
                     <div className="row">

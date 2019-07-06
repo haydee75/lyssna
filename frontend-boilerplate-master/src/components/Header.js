@@ -38,7 +38,7 @@ class Header extends Component {
 
         <div
           className="modal fade bd-example-modal-lg"
-          tabindex="-1"
+          tabIndex="-1"
           role="dialog"
           aria-labelledby="myLargeModalLabel"
           aria-hidden="true"

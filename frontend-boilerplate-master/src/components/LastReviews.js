@@ -49,7 +49,7 @@ class LastReviews extends Component {
               {/* <h5 className="team-title">{review.user.fullName}</h5> */}
               <span>
                 {review.rating}&nbsp;
-                <i className="lni-heart-filled" />
+                <i className="lni-star-filled" />
               </span>
               <p className="commentairePreview">{review.comments}</p>
             </div>

@@ -455,7 +455,7 @@ big {
   width: 50%;
 }
 
-.lni-heart-filled {
+.lni-star-filled {
   color: pink;
 }
 
@@ -598,4 +598,43 @@ big {
 
 .btn-width-100 {
   width: 100%;
+}
+
+/* Rating */
+
+.star-rating {
+  /* border: solid 1px #ccc; */
+  display: flex;
+  flex-direction: row-reverse;
+  font-size: 2em;
+  justify-content: space-around;
+  /* padding: 0 0.2em; */
+  text-align: center;
+  width: 5em;
+}
+
+.star-rating input {
+  display: none;
+}
+
+.star-rating label {
+  color: #ccc;
+  cursor: pointer;
+}
+
+.star-rating :checked ~ label {
+  color: pink;
+}
+
+.star-rating label:hover,
+.star-rating label:hover ~ label {
+  color: pink;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.lniBWhite {
+  background: transparent !important;
 }

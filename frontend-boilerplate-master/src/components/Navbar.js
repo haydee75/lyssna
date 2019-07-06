@@ -52,6 +52,19 @@ class Navbar extends Component {
       });
   };
 
+  displayProfile = user => {
+    console.log(this.props.currentUser);
+    // axios
+    //   .get(process.env.REACT_APP_HOST_API + "/profile/" + user, {
+    //     query: user
+    //   })
+    //   //console.log(user);
+    //   .then(response => {
+    //     this.props.history.push("/Profile/" + user);
+    //     //console.log(response);
+    //   });
+  };
+
   render() {
     //console.log("currentUserNavbar");
     //console.log(this.state.currentUser);
@@ -101,7 +114,6 @@ class Navbar extends Component {
                     <li className="nav-item">
                       <button
                         id="effect"
-                        type="button"
                         className="btn-playlist nav-link page-scroll"
                         data-toggle="modal"
                         data-target="#exampleModal"
@@ -111,6 +123,11 @@ class Navbar extends Component {
                       >
                         Ma playlist
                       </button>
+                    </li>
+                    <li className="nav-item">
+                      <Link to="/Profile" className="nav-link page-scroll">
+                        <i className="lni-user bold" />
+                      </Link>
                     </li>
                   </Fragment>
                 )}

@@ -13,11 +13,6 @@ class AddReview extends Component {
       rating: "0",
       comments: ""
     };
-    this.handleChangeSelect = this.handleChangeSelect.bind(this);
-  }
-
-  handleChangeSelect(event) {
-    this.setState({ rating: event.target.value });
   }
 
   handleChange = event => {
@@ -26,22 +21,16 @@ class AddReview extends Component {
   };
 
   handleFormSubmit = event => {
-    // console.log(
-    //   "Rating : " +
-    //     this.state.rating +
-    //     " || Comment : " +
-    //     this.state.comments +
-    //     " || id : " +
-    //     this.state.id +
-    //     " || user : " +
-    //     this.state.user
-    // );
+    var valueRating = document.querySelector('input[name="rating"]:checked')
+      .value;
+
+    console.log(valueRating);
 
     event.preventDefault();
 
     const id = this.state.id;
     const user = this.state.user;
-    const rating = this.state.rating;
+    const rating = valueRating;
     const comments = this.state.comments;
     const title = this.state.title;
     const image = this.state.image;
@@ -57,7 +46,7 @@ class AddReview extends Component {
       })
       .then(() => {
         //this.props.getData();
-        this.setState({ rating: 0, comments: "" });
+        this.setState({ rating: "0", comments: "" });
       })
       .catch(error => console.log(error));
   };
@@ -70,19 +59,28 @@ class AddReview extends Component {
         <input type="hidden" value={this.state.title} />
         <input type="hidden" value={this.state.image} />
 
-        <select
-          className="form-control form-control-sm"
-          value={this.state.rating}
-          onChange={this.handleChangeSelect}
-        >
-          <option value={this.state.rating}>{this.state.rating}</option>
-          <option value="1">1</option>
-          <option value="2">2</option>
-          <option value="3">3</option>
-          <option value="4">4</option>
-          <option value="5">5</option>
-        </select>
-        <br />
+        <div className="star-rating" id="rates">
+          <input type="radio" id="5-stars" name="rating" value="5" />
+          <label htmlFor="5-stars" className="star">
+            &#9733;
+          </label>
+          <input type="radio" id="4-stars" name="rating" value="4" />
+          <label htmlFor="4-stars" className="star">
+            &#9733;
+          </label>
+          <input type="radio" id="3-stars" name="rating" value="3" />
+          <label htmlFor="3-stars" className="star">
+            &#9733;
+          </label>
+          <input type="radio" id="2-stars" name="rating" value="2" />
+          <label htmlFor="2-stars" className="star">
+            &#9733;
+          </label>
+          <input type="radio" id="1-star" name="rating" value="1" />
+          <label htmlFor="1-star" className="star">
+            &#9733;
+          </label>
+        </div>
         <textarea
           className="form-control"
           placeholder="Votre commentaire..."

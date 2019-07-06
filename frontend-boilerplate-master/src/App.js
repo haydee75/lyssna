@@ -7,6 +7,7 @@ import Signup from "./components/user-pages/Signup";
 import Categories from "./components/Categories";
 import ListePodcastsByCategorie from "./components/ListePodcastsByCategorie";
 import ListeEpisodesByTopic from "./components/ListeEpisodesByTopic";
+import Profile from "./components/Profile";
 import ListeRecommendationsByID from "./components/ListeRecommendationsByID";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
@@ -109,6 +110,12 @@ class App extends Component {
               {...props}
               currentUser={this.state.currentUser}
             />
+          )}
+        />
+        <Route
+          path="/Profile"
+          render={props => (
+            <Profile {...props} currentUser={this.state.currentUser} />
           )}
         />
         <Route path="/Logout" />

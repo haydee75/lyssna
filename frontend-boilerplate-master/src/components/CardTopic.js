@@ -104,7 +104,7 @@ class CardTopic extends Component {
           <b>{review.user.fullName}</b>
           <span>
             {review.rating}&nbsp;
-            <i className="lni-heart-filled" />
+            <i className="lni-star-filled" />
           </span>
         </p>
         <p>{review.comments}</p>
@@ -203,11 +203,11 @@ class CardTopic extends Component {
                                     data-toggle="modal"
                                     data-target={`#myModal` + e.id}
                                   >
-                                    Interagir
+                                    Commenter
                                   </button>
                                 )}
                                 <div
-                                  className="modal fade"
+                                  className="modal fade "
                                   id={`myModal` + e.id}
                                 >
                                   <div className="modal-dialog modal-dialog-centered">

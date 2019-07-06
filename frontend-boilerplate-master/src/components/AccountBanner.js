@@ -43,7 +43,7 @@ class AccountBanner extends Component {
                     <div className="inviteContainer">
                       <input
                         className="invitebar"
-                        type="text"
+                        type="email"
                         placeholder="Entrez une adresse email"
                         value={this.state.email}
                         onChange={this.handleChange}

@@ -13,9 +13,7 @@ class Identites extends Component {
             <div className="col-lg-12">
               <div className="showcase-text section-header text-center">
                 <div>
-                  <h2 className="section-title">
-                    Playslists sur les identités
-                  </h2>
+                  <h2 className="section-title">Playlists sur les identités</h2>
                   <br /> <br />
                   <div className="desc-text">
                     <div className="row">

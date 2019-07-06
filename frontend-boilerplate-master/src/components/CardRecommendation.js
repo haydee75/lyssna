@@ -104,7 +104,7 @@ class CardRecommendation extends Component {
           <b>{review.user.fullName}</b>
           <span>
             {review.rating}&nbsp;
-            <i className="lni-heart-filled" />
+            <i className="lni-star-filled" />
           </span>
         </p>
         <p>{review.comments}</p>
@@ -202,7 +202,7 @@ class CardRecommendation extends Component {
                                     data-toggle="modal"
                                     data-target={`#myModal` + e.id}
                                   >
-                                    Interagir
+                                    Commenter
                                   </button>
                                 )}
                                 <div

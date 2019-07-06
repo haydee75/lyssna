@@ -32,6 +32,7 @@ class ListeRecommendationsByID extends Component {
           searchRecommendations={this.searchRecommendations.bind(this)}
           currentUser={this.props.currentUser}
         />
+        <br />
       </Fragment>
     );
   }
