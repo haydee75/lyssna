@@ -11,6 +11,10 @@ import GetInTouch from "./GetInTouch";
 import Sondage from "./Sondage";
 
 class Home extends Component {
+  componentDidMount() {
+    window.scrollTo(0, 0);
+  }
+
   searchTopic(topic) {
     axios
       .post(process.env.REACT_APP_HOST_API + "/topic", {

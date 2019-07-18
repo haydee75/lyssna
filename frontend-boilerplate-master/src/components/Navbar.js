@@ -28,12 +28,18 @@ class Navbar extends Component {
   };
 
   deleteEpisode = id => {
-    axios.post(
-      process.env.REACT_APP_HOST_API + "/deleteEpisodeFromPlaylist/" + id,
-      {
-        query: id
-      }
-    );
+    axios
+      .post(
+        process.env.REACT_APP_HOST_API + "/deleteEpisodeFromPlaylist/" + id,
+        {
+          query: id
+        }
+      )
+      .then(response => {
+        this.setState({
+          playlist: this.state.playlist.filter(p => p._id !== id)
+        });
+      });
   };
 
   // componentWillReceiveProps(nextProps) {

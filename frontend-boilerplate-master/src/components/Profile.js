@@ -25,9 +25,16 @@ class Profile extends Component {
                 <div className="contents">
                   <h2 className="head-title">Mon compte</h2>
                   <div>
-                    <p>Pseudo - </p>
-                    <p>Email - </p>
-                    <p>Mot de passe - </p>
+                    <p>
+                      Pseudo -
+                      {this.props.currentUser &&
+                        this.props.currentUser.fullName}
+                    </p>
+                    <p>
+                      Email -{" "}
+                      {this.props.currentUser && this.props.currentUser.email}
+                    </p>
+                    <p>Mot de passe - ************</p>
                   </div>
                   <div className="header-button">
                     <button

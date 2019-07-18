@@ -17,7 +17,7 @@ class LastReviews extends Component {
     axios
       .get(process.env.REACT_APP_HOST_API + `/lastReviews`)
       .then(response => {
-        console.log(response.data);
+        //console.log(response.data);
         this.setState({
           listeReviews: response.data
         });
